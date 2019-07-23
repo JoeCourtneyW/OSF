@@ -1,0 +1,30 @@
+name: OSF-Core
+main: osf.OSF
+version: 1.0
+api-version: 1.8
+depend: [Vault, PlaceholderAPI, SilkSpawners, ProtocolLib, Votifier]
+commands:
+    rename:
+      description: Rename the item in your hand
+    lore:
+      description: Edit the lore of the item in your hand
+    list:
+      description: List all online staff members
+    shop:
+      description: Bring up the item shop
+    sendMessage:
+      description: Send a player a blank message
+    bountyHunter:
+      description: Bounty Hunter NPC
+    enchanter:
+      description: Enchanter NPC
+    news:
+      description: Responds with server news
+    vote:
+      description: Sends voting links
+    warps:
+      description: Shows warps gui
+    crates:
+      description: Show crates gui
+    cratekey:
+      description: Give crate keys

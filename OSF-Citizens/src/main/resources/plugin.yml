@@ -1,0 +1,8 @@
+name: OSF-Citizens
+main: osf.OSFCitizens
+version: 1.0
+api-version: 1.8
+depend: [OSF-Core, Citizens]
+commands:
+  customskin:
+  npcaction:

@@ -1,0 +1,13 @@
+#Configuration file for OSF-Core
+
+#Database information
+database:
+  enabled: false
+  host: #test.com
+  port: #3306
+  username: #MySQL Username
+  password: #MySQL Password
+  databaseName: #MySQL Database Name
+chat:
+  prefix: "&7[&a&lOSF&7] &f"
+  itemshowkeyword: "[item]"

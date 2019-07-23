@@ -1,0 +1,1088 @@
+{
+  "farming": [
+    {
+      "ID": "oaksapling",
+      "TYPE": "SAPLING",
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 200
+    },
+    {
+      "ID": "sprucesapling",
+      "TYPE": "SAPLING",
+      "DATA": 1,
+      "NAME": "",
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 200
+    },
+    {
+      "ID": "birchsapling",
+      "TYPE": "SAPLING",
+      "DATA": 2,
+      "NAME": "",
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 200
+    },
+    {
+      "ID": "junglesapling",
+      "TYPE": "SAPLING",
+      "DATA": 3,
+      "NAME": "",
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 200
+    },
+    {
+      "ID": "acaciasapling",
+      "TYPE": "SAPLING",
+      "DATA": 4,
+      "NAME": "",
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 200
+    },
+    {
+      "ID": "darkoaksapling",
+      "TYPE": "SAPLING",
+      "DATA": 5,
+      "NAME": "",
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 200
+    },
+    {
+      "ID": "seed",
+      "TYPE": "SEEDS",
+      "SELL_PRICE": 1,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "wheat",
+      "TYPE": "WHEAT",
+      "SELL_PRICE": 11,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "pumpkinseed",
+      "TYPE": "PUMPKIN_SEEDS",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "pumpkin",
+      "TYPE": "PUMPKIN",
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "melonseed",
+      "TYPE": "MELON_SEEDS",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "melon",
+      "TYPE": "MELON",
+      "SELL_PRICE": 1,
+      "BUY_PRICE": 12.5
+    },
+    {
+      "ID": "sugarcane",
+      "TYPE": "SUGAR_CANE",
+      "SELL_PRICE": 22,
+      "BUY_PRICE": 100
+    },
+    {
+      "ID": "cocoabean",
+      "TYPE": "INK_SACK",
+      "DATA": 3,
+      "SELL_PRICE": 25,
+      "BUY_PRICE": 18
+    },
+    {
+      "ID": "netherwart",
+      "TYPE": "NETHER_STALK",
+      "SELL_PRICE": 11,
+      "BUY_PRICE": 75
+    },
+    {
+      "ID": "redmushroom",
+      "TYPE": "RED_MUSHROOM",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "brownmushroom",
+      "TYPE": "BROWN_MUSHROOM",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "cactus",
+      "TYPE": "CACTUS",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 75
+    }
+  ],
+  "spawners": [
+    {
+      "ID": "cowspawner",
+      "TYPE": "MOB_SPAWNER",
+      "ENTITY_ID": 92,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 75000
+    },
+    {
+      "ID": "zombiespawner",
+      "TYPE": "MOB_SPAWNER",
+      "ENTITY_ID": 54,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 150000
+    },
+    {
+      "ID": "skeletonspawner",
+      "TYPE": "MOB_SPAWNER",
+      "ENTITY_ID": 51,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 150000
+    },
+    {
+      "ID": "irongolemspawner",
+      "TYPE": "MOB_SPAWNER",
+      "ENTITY_ID": 99,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 1000000
+    },
+    {
+      "ID": "blazespawner",
+      "TYPE": "MOB_SPAWNER",
+      "ENTITY_ID": 61,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 250000
+    },
+    {
+      "ID": "endermanspawner",
+      "TYPE": "MOB_SPAWNER",
+      "ENTITY_ID": 58,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 650000
+    }
+  ],
+  "mobdrops": [
+    {
+      "ID": "netherstar",
+      "TYPE": "NETHER_STAR",
+      "SELL_PRICE": 4000,
+      "BUY_PRICE": 8000
+    },
+    {
+      "ID": "arrow",
+      "TYPE": "ARROW",
+      "SELL_PRICE": 1.5,
+      "BUY_PRICE": 5
+    },
+    {
+      "ID": "blazerod",
+      "TYPE": "BLAZE_ROD",
+      "SELL_PRICE": 25,
+      "BUY_PRICE": 130
+    },
+    {
+      "ID": "enderpearl",
+      "TYPE": "ENDER_PEARL",
+      "SELL_PRICE": 10,
+      "BUY_PRICE": 40
+    },
+    {
+      "ID": "spidereye",
+      "TYPE": "SPIDER_EYE",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 30
+    },
+    {
+      "ID": "string",
+      "TYPE": "STRING",
+      "SELL_PRICE": 1,
+      "BUY_PRICE": 5
+    },
+    {
+      "ID": "feather",
+      "TYPE": "FEATHER",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 5
+    },
+    {
+      "ID": "leather",
+      "TYPE": "LEATHER",
+      "SELL_PRICE": 4,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "egg",
+      "TYPE": "EGG",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 5
+    },
+    {
+      "ID": "ghasttear",
+      "TYPE": "GHAST_TEAR",
+      "SELL_PRICE": 120,
+      "BUY_PRICE": 200
+    }
+  ],
+  "potions": [
+    {
+      "ID": "bottle",
+      "TYPE": "GLASS_BOTTLE",
+      "SELL_PRICE": 1,
+      "BUY_PRICE": 3
+    },
+    {
+      "ID": "awkwardpotion",
+      "TYPE": "POTION",
+      "DATA": 16,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 350
+    },
+    {
+      "ID": "waterbreathingpotion",
+      "TYPE": "POTION",
+      "DATA": 8269,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 350
+    },
+    {
+      "ID": "strengthpotion",
+      "TYPE": "POTION",
+      "DATA": 8233,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 350
+    },
+    {
+      "ID": "speedpotion",
+      "TYPE": "POTION",
+      "DATA": 8266,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 350
+    },
+    {
+      "ID": "fireresistancepotion",
+      "TYPE": "POTION",
+      "DATA": 8259,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 350
+    },
+    {
+      "ID": "nightvisionpotion",
+      "TYPE": "POTION",
+      "DATA": 8262,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 350
+    },
+    {
+      "ID": "healingpotion",
+      "TYPE": "POTION",
+      "DATA": 16421,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 350
+    },
+    {
+      "ID": "weaknesspotion",
+      "TYPE": "POTION",
+      "DATA": 16456,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 350
+    },
+    {
+      "ID": "blazepowder",
+      "TYPE": "BLAZE_POWDER",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "spider_eye",
+      "TYPE": "SPIDER_EYE",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 30
+    },
+    {
+      "ID": "fermentedspidereye",
+      "TYPE": "FERMENTED_SPIDER_EYE",
+      "SELL_PRICE": 4,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "magmacream",
+      "TYPE": "MAGMA_CREAM",
+      "SELL_PRICE": 10,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "glisteningmelon",
+      "TYPE": "SPECKLED_MELON",
+      "SELL_PRICE": 1,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "goldencarrot",
+      "TYPE": "GOLDEN_CARROT",
+      "SELL_PRICE": 5,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "glowstonedust",
+      "TYPE": "GLOWSTONE_DUST",
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 25
+    }
+  ],
+  "food": [
+    {
+      "ID": "steak",
+      "TYPE": "COOKED_BEEF",
+      "SELL_PRICE": 8,
+      "BUY_PRICE": 30
+    },
+    {
+      "ID": "porkchop",
+      "TYPE": "GRILLED_PORK",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 30
+    },
+    {
+      "ID": "chicken",
+      "TYPE": "COOKED_CHICKEN",
+      "SELL_PRICE": 5,
+      "BUY_PRICE": 30
+    },
+    {
+      "ID": "cookedfish",
+      "TYPE": "COOKED_FISH",
+      "SELL_PRICE": 4,
+      "BUY_PRICE": 20
+    },
+    {
+      "ID": "carrot",
+      "TYPE": "CARROT_ITEM",
+      "SELL_PRICE": 10,
+      "BUY_PRICE": 15
+    },
+    {
+      "ID": "bakedpotato",
+      "TYPE": "BAKED_POTATO",
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 7
+    },
+    {
+      "ID": "potato",
+      "TYPE": "POTATO_ITEM",
+      "SELL_PRICE": 10,
+      "BUY_PRICE": 15
+    },
+    {
+      "ID": "bread",
+      "TYPE": "BREAD",
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 10
+    },
+    {
+      "ID": "melon",
+      "TYPE": "MELON",
+      "SELL_PRICE": 4,
+      "BUY_PRICE": 5
+    },
+    {
+      "ID": "cookedmutton",
+      "TYPE": "COOKED_MUTTON",
+      "SELL_PRICE": 4,
+      "BUY_PRICE": 20
+    },
+    {
+      "ID": "mushroomstew",
+      "TYPE": "MUSHROOM_SOUP",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 12
+    },
+    {
+      "ID": "goldenapple",
+      "TYPE": "GOLDEN_APPLE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 4000
+    }
+  ],
+  "ores": [
+    {
+      "ID": "emeraldblock",
+      "TYPE": "EMERALD_BLOCK",
+      "SELL_PRICE": 450,
+      "BUY_PRICE": 2700
+    },
+    {
+      "ID": "emerald",
+      "TYPE": "EMERALD",
+      "SELL_PRICE": 50,
+      "BUY_PRICE": 300
+    },
+    {
+      "ID": "diamondblock",
+      "TYPE": "DIAMOND_BLOCK",
+      "SELL_PRICE": 1800,
+      "BUY_PRICE": 3600
+    },
+    {
+      "ID": "diamond",
+      "TYPE": "DIAMOND",
+      "SELL_PRICE": 400,
+      "BUY_PRICE": 200
+    },
+    {
+      "ID": "goldblock",
+      "TYPE": "GOLD_BLOCK",
+      "SELL_PRICE": 180,
+      "BUY_PRICE": 1080
+    },
+    {
+      "ID": "gold",
+      "TYPE": "GOLD_INGOT",
+      "SELL_PRICE": 20,
+      "BUY_PRICE": 120
+    },
+    {
+      "ID": "ironblock",
+      "TYPE": "IRON_BLOCK",
+      "SELL_PRICE": 225,
+      "BUY_PRICE": 900
+    },
+    {
+      "ID": "iron",
+      "TYPE": "IRON_INGOT",
+      "SELL_PRICE": 50,
+      "BUY_PRICE": 100
+    },
+    {
+      "ID": "coalblock",
+      "TYPE": "COAL_BLOCK",
+      "SELL_PRICE": 112.5,
+      "BUY_PRICE": 1575
+    },
+    {
+      "ID": "coal",
+      "TYPE": "COAL",
+      "SELL_PRICE": 12.5,
+      "BUY_PRICE": 175
+    },
+    {
+      "ID": "redstoneblock",
+      "TYPE": "REDSTONE_BLOCK",
+      "SELL_PRICE": 100,
+      "BUY_PRICE": 225
+    },
+    {
+      "ID": "redstone",
+      "TYPE": "REDSTONE",
+      "SELL_PRICE": 10,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "lapisblock",
+      "TYPE": "LAPIS_BLOCK",
+      "SELL_PRICE": 135,
+      "BUY_PRICE": 1575
+    },
+    {
+      "ID": "lapis",
+      "TYPE": "INK_SACK",
+      "DATA": 4,
+      "SELL_PRICE": 15,
+      "BUY_PRICE": 175
+    },
+    {
+      "ID": "quartz",
+      "TYPE": "QUARTZ",
+      "SELL_PRICE": 5,
+      "BUY_PRICE": 10
+    }
+  ],
+  "combat": [
+    {
+      "ID": "diamondhelmet",
+      "TYPE": "DIAMOND_HELMET",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 2200
+    },
+    {
+      "ID": "diamondchestplate",
+      "TYPE": "DIAMOND_CHESTPLATE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 3400
+    },
+    {
+      "ID": "diamondleggings",
+      "TYPE": "DIAMOND_LEGGINGS",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 3000
+    },
+    {
+      "ID": "diamondboots",
+      "TYPE": "DIAMOND_BOOTS",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 1800
+    },
+    {
+      "ID": "diamondsword",
+      "TYPE": "DIAMOND_SWORD",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 1000
+    },
+    {
+      "ID": "diamondpickaxe",
+      "TYPE": "DIAMOND_PICKAXE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 1400
+    },
+    {
+      "ID": "diamondaxe",
+      "TYPE": "DIAMOND_AXE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 1400
+    },
+    {
+      "ID": "diamondshovel",
+      "TYPE": "DIAMOND_SPADE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 600
+    },
+    {
+      "ID": "diamondhoe",
+      "TYPE": "DIAMOND_HOE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 1000
+    },
+    {
+      "ID": "ironhelmet",
+      "TYPE": "IRON_HELMET",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 700
+    },
+    {
+      "ID": "ironchestplate",
+      "TYPE": "IRON_CHESTPLATE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 1000
+    },
+    {
+      "ID": "ironleggings",
+      "TYPE": "IRON_LEGGINGS",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 900
+    },
+    {
+      "ID": "ironboots",
+      "TYPE": "IRON_BOOTS",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 600
+    },
+    {
+      "ID": "ironsword",
+      "TYPE": "IRON_SWORD",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 400
+    },
+    {
+      "ID": "ironpickaxe",
+      "TYPE": "IRON_PICKAXE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 500
+    },
+    {
+      "ID": "ironaxe",
+      "TYPE": "IRON_AXE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 500
+    },
+    {
+      "ID": "ironshovel",
+      "TYPE": "IRON_SPADE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 300
+    },
+    {
+      "ID": "ironhoe",
+      "TYPE": "IRON_HOE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 400
+    }
+  ],
+  "blocks": [
+    {
+      "ID": "obsidian",
+      "TYPE": "OBSIDIAN",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 75
+    },
+    {
+      "ID": "stonebrick",
+      "TYPE": "SMOOTH_BRICK",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "mossystonebrick",
+      "TYPE": "SMOOTH_BRICK",
+      "DATA": 1,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "chiseledstonebrick",
+      "TYPE": "SMOOTH_BRICK",
+      "DATA": 2,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "stone",
+      "TYPE": "STONE",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "cobblestone",
+      "TYPE": "COBBLESTONE",
+      "SELL_PRICE": 1,
+      "BUY_PRICE": 2
+    },
+    {
+      "ID": "mossycobblestone",
+      "TYPE": "MOSSY_COBBLESTONE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "dirt",
+      "TYPE": "DIRT",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 5
+    },
+    {
+      "ID": "grass",
+      "TYPE": "GRASS",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "mycelium",
+      "TYPE": "MYCEL",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "podzol",
+      "TYPE": "DIRT",
+      "DATA": 2,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "coarsedirt",
+      "TYPE": "DIRT",
+      "DATA": 1,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "oaklog",
+      "TYPE": "LOG",
+      "SELL_PRICE": 12.5,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "oakplank",
+      "TYPE": "WOOD",
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 6.5
+    },
+    {
+      "ID": "oakstair",
+      "TYPE": "WOOD_STAIRS",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 75
+    },
+    {
+      "ID": "oakleaves",
+      "TYPE": "LEAVES",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "sprucelog",
+      "TYPE": "LOG",
+      "DATA": 1,
+      "SELL_PRICE": 12.5,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "spruceplank",
+      "TYPE": "WOOD",
+      "DATA": 1,
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 6.5
+    },
+    {
+      "ID": "sprucestair",
+      "TYPE": "WOOD_STAIRS",
+      "DATA": 1,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 75
+    },
+    {
+      "ID": "spruceleaves",
+      "TYPE": "LEAVES",
+      "DATA": 1,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "birchlog",
+      "TYPE": "LOG",
+      "DATA": 2,
+      "SELL_PRICE": 12.5,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "birchplank",
+      "TYPE": "WOOD",
+      "DATA": 2,
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 6.5
+    },
+    {
+      "ID": "birchstair",
+      "TYPE": "WOOD_STAIRS",
+      "DATA": 2,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 75
+    },
+    {
+      "ID": "birchleaves",
+      "TYPE": "LEAVES",
+      "DATA": 2,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "junglelog",
+      "TYPE": "LOG",
+      "DATA": 3,
+      "SELL_PRICE": 12.5,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "jungleplank",
+      "TYPE": "WOOD",
+      "DATA": 3,
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 6.5
+    },
+    {
+      "ID": "junglestair",
+      "TYPE": "WOOD_STAIRS",
+      "DATA": 3,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 75
+    },
+    {
+      "ID": "jungleleaves",
+      "TYPE": "LEAVES",
+      "DATA": 3,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "acacialog",
+      "TYPE": "LOG_2",
+      "SELL_PRICE": 12.5,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "acaciaplank",
+      "TYPE": "WOOD",
+      "DATA": 4,
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 6.5
+    },
+    {
+      "ID": "acaciastair",
+      "TYPE": "WOOD_STAIRS",
+      "DATA": 4,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 75
+    },
+    {
+      "ID": "acacialeaves",
+      "TYPE": "LEAVES_2",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "darkoaklog",
+      "TYPE": "LOG_2",
+      "DATA": 1,
+      "SELL_PRICE": 12.5,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "darkoakplank",
+      "TYPE": "WOOD",
+      "DATA": 5,
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 6.5
+    },
+    {
+      "ID": "darkoakstair",
+      "TYPE": "WOOD_STAIRS",
+      "DATA": 5,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 75
+    },
+    {
+      "ID": "darkoakleaves",
+      "TYPE": "LEAVES_2",
+      "DATA": 1,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "clay",
+      "TYPE": "CLAY",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "hardenedclay",
+      "TYPE": "HARD_CLAY",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "gravel",
+      "TYPE": "GRAVEL",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "sandstone",
+      "TYPE": "SANDSTONE",
+      "SELL_PRICE": 3,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "sand",
+      "TYPE": "SAND",
+      "SELL_PRICE": 1,
+      "BUY_PRICE": 5
+    },
+    {
+      "ID": "redsand",
+      "TYPE": "SAND",
+      "DATA": 1,
+      "SELL_PRICE": 1,
+      "BUY_PRICE": 5
+    },
+    {
+      "ID": "glass",
+      "TYPE": "GLASS",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "quartzblock",
+      "TYPE": "QUARTZ_BLOCK",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "chiseledquartz",
+      "TYPE": "QUARTZ_BLOCK",
+      "DATA": 1,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "pillarquartz",
+      "TYPE": "QUARTZ_BLOCK",
+      "DATA": 2,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "quartzstair",
+      "TYPE": "QUARTZ_STAIRS",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 75
+    },
+    {
+      "ID": "netherrack",
+      "TYPE": "NETHERRACK",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "netherbrick",
+      "TYPE": "NETHER_BRICK",
+      "SELL_PRICE": 20,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "netherbrickstairs",
+      "TYPE": "NETHER_BRICK_STAIRS",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 75
+    },
+    {
+      "ID": "soulsand",
+      "TYPE": "SOUL_SAND",
+      "SELL_PRICE": 15,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "glowstone",
+      "TYPE": "GLOWSTONE",
+      "SELL_PRICE": 7,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "snow",
+      "TYPE": "SNOW_BLOCK",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "ice",
+      "TYPE": "ICE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 35
+    },
+    {
+      "ID": "packedice",
+      "TYPE": "PACKED_ICE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 35
+    },
+    {
+      "ID": "endstone",
+      "TYPE": "ENDER_STONE",
+      "SELL_PRICE": 2,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "diorite",
+      "TYPE": "STONE",
+      "DATA": 3,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "andesite",
+      "TYPE": "STONE",
+      "DATA": 5,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "granite",
+      "TYPE": "STONE",
+      "DATA": 1,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "prismarine",
+      "TYPE": "PRISMARINE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "prismarinebrick",
+      "TYPE": "PRISMARINE",
+      "DATA": 1,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "darkprismarine",
+      "TYPE": "PRISMARINE",
+      "DATA": 2,
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "sealantern",
+      "TYPE": "SEA_LANTERN",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 5000
+    },
+    {
+      "ID": "chest",
+      "TYPE": "CHEST",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "trappedchest",
+      "TYPE": "TRAPPED_CHEST",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 50
+    },
+    {
+      "ID": "enderchest",
+      "TYPE": "ENDER_CHEST",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    },
+    {
+      "ID": "hopper",
+      "TYPE": "HOPPER",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 10000
+    },
+    {
+      "ID": "beacon",
+      "TYPE": "BEACON",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 200000
+    },
+    {
+      "ID": "slimeblock",
+      "TYPE": "SLIME_BLOCK",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 2500
+    },
+    {
+      "ID": "ironbars",
+      "TYPE": "IRON_FENCE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 75
+    },
+    {
+      "ID": "wool",
+      "TYPE": "WOOL",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 75
+    },
+    {
+      "ID": "enchantmenttable",
+      "TYPE": "ENCHANTMENT_TABLE",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 1000
+    },
+    {
+      "ID": "anvil",
+      "TYPE": "ANVIL",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 7500
+    },
+    {
+      "ID": "bookshelf",
+      "TYPE": "BOOKSHELF",
+      "SELL_PRICE": 0,
+      "BUY_PRICE": 25
+    }
+  ]
+}

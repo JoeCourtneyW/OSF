@@ -19,8 +19,6 @@ import net.milkbowl.vault.permission.Permission;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
-import osf.coinflip.CoinFlip;
-import osf.coinflip.CommandCoinFlip;
 import osf.commands.*;
 import osf.crates.CommandCrateKey;
 import osf.crates.CommandCrates;

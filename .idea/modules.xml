@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OSF-Citizens/OSF-Citizens.iml" filepath="$PROJECT_DIR$/OSF-Citizens/OSF-Citizens.iml" />
-      <module fileurl="file://$PROJECT_DIR$/OSF-Core.iml" filepath="$PROJECT_DIR$/OSF-Core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OSF-Core/OSF-Core.iml" filepath="$PROJECT_DIR$/OSF-Core/OSF-Core.iml" />
     </modules>
   </component>
 </project>

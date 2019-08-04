@@ -1,0 +1,7 @@
+name: OSF-Discord
+main: discord.plugin.OSFDiscord
+version: '1.0'
+api-version: '1.12'
+depend: [OSF-Core]
+commands:
+  link:

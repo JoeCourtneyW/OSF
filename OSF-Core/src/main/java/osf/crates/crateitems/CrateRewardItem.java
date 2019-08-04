@@ -1,12 +1,14 @@
 package osf.crates.crateitems;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import org.bukkit.Bukkit;
+import de.tr7zw.itemnbtapi.NBTItem;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionEffectType;
 import osf.OSF;
+import osf.potions.InfinitePotionEffect;
 import osf.utils.InventoryUtil;
 import osf.utils.ItemBuilder;
 import osf.utils.ItemUtil;
@@ -63,6 +65,12 @@ public class CrateRewardItem implements CrateReward {
         ItemBuilder reward = new ItemBuilder(type);
         if(type == Material.MOB_SPAWNER) {
             reward = new ItemBuilder(OSF.silkUtil.setSpawnerType(reward.grab(), (short) rewardNode.get("ENTITY_ID").asInt(), "&e%creature% &fSpawner"));
+        }else if(type == Material.POTION) {
+            if(rewardNode.has("INFINITE") && rewardNode.get("INFINITE").asBoolean()) {
+                PotionEffectType potionEffectType = PotionEffectType.getByName(rewardNode.get("EFFECT_TYPE").asText());
+                int potionEffectAmplifier = rewardNode.get("EFFECT_AMPLIFIER").asInt();
+                reward = new ItemBuilder(new InfinitePotionEffect(potionEffectType, potionEffectAmplifier).generateItemStack());
+            }
         }
 
         if (rewardNode.has("DATA")) {
@@ -84,7 +92,14 @@ public class CrateRewardItem implements CrateReward {
         } else {
             reward.amount(Integer.parseInt(amount));
         }
-
-        return reward.grab();
+        ItemStack builtReward = reward.grab();
+        if(rewardNode.has("NBT")) {
+            NBTItem nbtItem = new NBTItem(builtReward);
+            for(JsonNode nbtNode : rewardNode.get("NBT")) {
+                nbtItem.setString(nbtNode.get("key").asText(), nbtNode.get("value").asText());
+            }
+            builtReward = nbtItem.getItem();
+        }
+        return builtReward;
     }
 }

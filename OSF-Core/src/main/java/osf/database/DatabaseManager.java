@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 public class DatabaseManager {
 
+    private static DatabaseManager INSTANCE;
+
     private Database database;
 
 
@@ -34,5 +36,9 @@ public class DatabaseManager {
             e.printStackTrace();
             Logger.error("Failed to close connection to MySQL Database");
         }
+    }
+
+    public static DatabaseManager getInstance() {
+        return INSTANCE;
     }
 }

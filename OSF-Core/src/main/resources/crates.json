@@ -2,7 +2,7 @@
 	"crates": {
 		"vote": {
 			"name": "&bVote Crate",
-			"display_material": "ENDER_CHEST",
+			"display_material": "CHEST",
 			"description": ["&7Get Vote Keys by voting on every link daily!"],
 			"rewards": [
 				{
@@ -99,22 +99,706 @@
 					"REWARD": {
 						"TYPE": "PAPER",
 						"AMOUNT": "1",
-						"NAME": "&2Farmer Rank Voucher"
+						"NAME": "&2Farmer Rank Voucher",
+						"NBT": [
+							{
+								"key": "rank",
+								"value": "farmer"
+							}
+						]
 					}
 				}
 			]
 		},
 		"bronze": {
-		
+			"name": "&dBronze Crate",
+			"display_material": "ENDER_CHEST",
+			"description": ["&7Purchase Bronze Crate Keys on the store @ shop.osfactions.net"],
+			"rewards": [
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&b&lKnight Kit",
+					"DISPLAY_MATERIAL": "DIAMOND_SWORD",
+					"COMMAND": "kit knight %player%",
+					"MESSAGE": "&b&kKnight Kit",
+					"CHANCE": 0.15
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b3-5 &eCow &fSpawner(s)",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.18,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 92,
+						"AMOUNT": "%3-5%"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b2 &eBlaze &fSpawner(s)",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.10,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 61,
+						"AMOUNT": "2"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b1 &eEnderman &fSpawner",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.05,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 58,
+						"AMOUNT": "1"
+					}
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&a$200,000",
+					"DISPLAY_MATERIAL": "PAPER",
+					"COMMAND": "eco give %player% 200000",
+					"MESSAGE": "&a$200,000",
+					"CHANCE": 0.157
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&a$500,000-650,000",
+					"DISPLAY_MATERIAL": "PAPER",
+					"COMMAND": "eco give %player% %500000-650000%",
+					"MESSAGE": "&a$%amount%",
+					"CHANCE": 0.1
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b2 &eGolden Apples",
+					"DISPLAY_MATERIAL": "GOLDEN_APPLE",
+					"CHANCE": 0.15,
+					"MESSAGE": "&b2x &eGolden Apples",
+					"REWARD": {
+						"TYPE": "GOLDEN_APPLE",
+						"DATA": 1,
+						"AMOUNT": "2"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b3-5 &aCreeper Eggs",
+					"DISPLAY_MATERIAL": "MONSTER_EGG",
+					"DISPLAY_DATA": 50,
+					"CHANCE": 0.10,
+					"MESSAGE": "&b%amount%x &aCreeper Eggs",
+					"REWARD": {
+						"TYPE": "MONSTER_EGG",
+						"DATA": 50,
+						"AMOUNT": "%3-5%"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&2Farmer Rank",
+					"DISPLAY_MATERIAL": "PAPER",
+					"CHANCE": 0.008,
+					"MESSAGE": "&2Farmer Rank Voucher",
+					"REWARD": {
+						"TYPE": "PAPER",
+						"AMOUNT": "1",
+						"NAME": "&2Farmer Rank Voucher",
+						"NBT": [
+							{
+								"key": "rank",
+								"value": "farmer"
+							}
+						]
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&8Blacksmith Rank",
+					"DISPLAY_MATERIAL": "PAPER",
+					"CHANCE": 0.005,
+					"MESSAGE": "&8Blacksmith Rank Voucher",
+					"REWARD": {
+						"TYPE": "PAPER",
+						"AMOUNT": "1",
+						"NAME": "&8Blacksmith Rank Voucher",
+						"NBT": [
+							{
+								"key": "rank",
+								"value": "blacksmith"
+							}
+						]
+					}
+				}
+			]
 		},
 		"silver": {
-		
+			"name": "&8Silver Crate",
+			"display_material": "ENDER_CHEST",
+			"description": ["&7Purchase Silver Crate Keys on the store @ shop.osfactions.net"],
+			"rewards": [
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&4&lWarlord Kit",
+					"DISPLAY_MATERIAL": "DIAMOND_SWORD",
+					"COMMAND": "kit warlord %player%",
+					"MESSAGE": "&4&lWarlord Kit",
+					"CHANCE": 0.20
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&3&lDuke Kit",
+					"DISPLAY_MATERIAL": "DIAMOND_SWORD",
+					"COMMAND": "kit duke %player%",
+					"MESSAGE": "&3&lDuke Kit",
+					"CHANCE": 0.15
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b3-5 &eBlaze &fSpawner(s)",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.20,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 61,
+						"AMOUNT": "%3-5%"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b2 &eZombie Pigman &fSpawner(s)",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.057,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 57,
+						"AMOUNT": "2"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b8-10 &eGolden Apples",
+					"DISPLAY_MATERIAL": "GOLDEN_APPLE",
+					"CHANCE": 0.13,
+					"MESSAGE": "&b%amount%x &eGolden Apples",
+					"REWARD": {
+						"TYPE": "GOLDEN_APPLE",
+						"DATA": 1,
+						"AMOUNT": "%8-10%"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b8-12 &aCreeper Eggs",
+					"DISPLAY_MATERIAL": "MONSTER_EGG",
+					"DISPLAY_DATA": 50,
+					"CHANCE": 0.15,
+					"MESSAGE": "&b%amount%x &aCreeper Eggs",
+					"REWARD": {
+						"TYPE": "MONSTER_EGG",
+						"DATA": 50,
+						"AMOUNT": "%8-12%"
+					}
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&a$1,000,000-1,250,000",
+					"DISPLAY_MATERIAL": "PAPER",
+					"COMMAND": "eco give %player% %1000000-1250000%",
+					"MESSAGE": "&a$%amount%",
+					"CHANCE": 0.10
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&8Blacksmith Rank",
+					"DISPLAY_MATERIAL": "PAPER",
+					"CHANCE": 0.008,
+					"MESSAGE": "&8Blacksmith Rank Voucher",
+					"REWARD": {
+						"TYPE": "PAPER",
+						"AMOUNT": "1",
+						"NAME": "&8Blacksmith Rank Voucher",
+						"NBT": [
+							{
+								"key": "rank",
+								"value": "blacksmith"
+							}
+						]
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&bKnight Rank",
+					"DISPLAY_MATERIAL": "PAPER",
+					"CHANCE": 0.005,
+					"MESSAGE": "&bKnight Rank Voucher",
+					"REWARD": {
+						"TYPE": "PAPER",
+						"AMOUNT": "1",
+						"NAME": "&bKnight Rank Voucher",
+						"NBT": [
+							{
+								"key": "rank",
+								"value": "knight"
+							}
+						]
+					}
+				}
+			]
 		},
 		"gold": {
-		
+			"name": "&6Gold Crate",
+			"display_material": "ENDER_CHEST",
+			"description": ["&7Purchase Gold Crate Keys on the store @ shop.osfactions.net"],
+			"rewards": [
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&3&lDuke Kit",
+					"DISPLAY_MATERIAL": "DIAMOND_SWORD",
+					"COMMAND": "kit duke %player%",
+					"MESSAGE": "&3&lDuke Kit",
+					"CHANCE": 0.16
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&5&lKing Kit",
+					"DISPLAY_MATERIAL": "DIAMOND_SWORD",
+					"COMMAND": "kit king %player%",
+					"MESSAGE": "&5&lKing Kit",
+					"CHANCE": 0.15
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b5 &eEnderman &fSpawners",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.05,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 58,
+						"AMOUNT": "5"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b1 &eIron Golem &fSpawner",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.05,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 99,
+						"AMOUNT": "1"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b2-4 &eZombie Pigman &fSpawner(s)",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.025,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 57,
+						"AMOUNT": "%2-4%"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b5-8 &eBlaze &fSpawner(s)",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.25,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 57,
+						"AMOUNT": "%5-8%"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b12-14 &eGolden Apples",
+					"DISPLAY_MATERIAL": "GOLDEN_APPLE",
+					"CHANCE": 0.10,
+					"MESSAGE": "&b%amount%x &eGolden Apples",
+					"REWARD": {
+						"TYPE": "GOLDEN_APPLE",
+						"DATA": 1,
+						"AMOUNT": "%12-14%"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b16-20 &aCreeper Eggs",
+					"DISPLAY_MATERIAL": "MONSTER_EGG",
+					"DISPLAY_DATA": 50,
+					"CHANCE": 0.10,
+					"MESSAGE": "&b%amount%x &aCreeper Eggs",
+					"REWARD": {
+						"TYPE": "MONSTER_EGG",
+						"DATA": 50,
+						"AMOUNT": "%16-20%"
+					}
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&a$3,000,000-3,500,000",
+					"DISPLAY_MATERIAL": "PAPER",
+					"COMMAND": "eco give %player% %3000000-3500000%",
+					"MESSAGE": "&a$%amount%",
+					"CHANCE": 0.05
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&bKnight Rank",
+					"DISPLAY_MATERIAL": "PAPER",
+					"CHANCE": 0.01,
+					"MESSAGE": "&bKnight Rank Voucher",
+					"REWARD": {
+						"TYPE": "PAPER",
+						"AMOUNT": "1",
+						"NAME": "&bKnight Rank Voucher",
+						"NBT": [
+							{
+								"key": "rank",
+								"value": "knight"
+							}
+						]
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&4Warlord Rank",
+					"DISPLAY_MATERIAL": "PAPER",
+					"CHANCE": 0.005,
+					"MESSAGE": "&4Warlord Rank Voucher",
+					"REWARD": {
+						"TYPE": "PAPER",
+						"AMOUNT": "1",
+						"NAME": "&4Warlord Rank Voucher",
+						"NBT": [
+							{
+								"key": "rank",
+								"value": "warlord"
+							}
+						]
+					}
+				}
+			]
 		},
 		"platinum": {
-		
+			"name": "&9Platinum Crate",
+			"display_material": "ENCHANTMENT_TABLE",
+			"description": ["&7Purchase Platinum Crate Keys on the store @ shop.osfactions.net"],
+			"rewards": [
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&5&lKing Kit",
+					"DISPLAY_MATERIAL": "DIAMOND_SWORD",
+					"COMMAND": "kit king %player%",
+					"MESSAGE": "&5&lKing Kit",
+					"CHANCE": 0.15
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b5-7 &eEnderman &fSpawners",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.15,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 58,
+						"AMOUNT": "%5-7%"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b5-6 &eZombie Pigman &fSpawners",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.10,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 57,
+						"AMOUNT": "%5-6%"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b10-11 &eBlaze &fSpawners",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.25,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 57,
+						"AMOUNT": "%10-11%"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b3 &eIron Golem &fSpawners",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.055,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 99,
+						"AMOUNT": "3"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b20-24 &eGolden Apples",
+					"DISPLAY_MATERIAL": "GOLDEN_APPLE",
+					"CHANCE": 0.10,
+					"MESSAGE": "&b%amount%x &eGolden Apples",
+					"REWARD": {
+						"TYPE": "GOLDEN_APPLE",
+						"DATA": 1,
+						"AMOUNT": "%20-24%"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b24-30 &aCreeper Eggs",
+					"DISPLAY_MATERIAL": "MONSTER_EGG",
+					"DISPLAY_DATA": 50,
+					"CHANCE": 0.10,
+					"MESSAGE": "&b%amount%x &aCreeper Eggs",
+					"REWARD": {
+						"TYPE": "MONSTER_EGG",
+						"DATA": 50,
+						"AMOUNT": "%24-30%"
+					}
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&a$5,000,000-6,000,000",
+					"DISPLAY_MATERIAL": "PAPER",
+					"COMMAND": "eco give %player% %5000000-6000000%",
+					"MESSAGE": "&a$%amount%",
+					"CHANCE": 0.10
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&c/fly command",
+					"DISPLAY_MATERIAL": "FEATHER",
+					"COMMAND": "lp user %player% permission set essentials.fly true",
+					"MESSAGE": "&c\"/fly\" command",
+					"CHANCE": 0.10
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&c/fix all Command",
+					"DISPLAY_MATERIAL": "ANVIL",
+					"COMMAND": "lp user %player% permission set essentials.fix.all true",
+					"MESSAGE": "&c\"/fix all\" command",
+					"CHANCE": 0.10
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&3Duke Rank",
+					"DISPLAY_MATERIAL": "PAPER",
+					"CHANCE": 0.01,
+					"MESSAGE": "&3Duke Rank Voucher",
+					"REWARD": {
+						"TYPE": "PAPER",
+						"AMOUNT": "1",
+						"NAME": "&3Duke Rank Voucher",
+						"NBT": [
+							{
+								"key": "rank",
+								"value": "duke"
+							}
+						]
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&5King Rank",
+					"DISPLAY_MATERIAL": "PAPER",
+					"CHANCE": 0.005,
+					"MESSAGE": "&5King Rank Voucher",
+					"REWARD": {
+						"TYPE": "PAPER",
+						"AMOUNT": "1",
+						"NAME": "&5King Rank Voucher",
+						"NBT": [
+							{
+								"key": "rank",
+								"value": "king"
+							}
+						]
+					}
+				}
+			]
+		},
+		"nitro": {
+			"name": "&5Nitro Crate",
+			"display_material": "GLOWSTONE_DUST",
+			"description": ["&7Get Nitro Crate Keys every month", "by boosting the discord server with Discord Nitro!"],
+			"rewards": [
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&5&lKing Kit",
+					"DISPLAY_MATERIAL": "DIAMOND_SWORD",
+					"COMMAND": "kit king %player%",
+					"MESSAGE": "&5&lKing Kit",
+					"CHANCE": 0.15
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b1 &eIron Golem &fSpawner",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.04,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 99,
+						"AMOUNT": "1"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b6 &eBlaze &fSpawners",
+					"DISPLAY_MATERIAL": "MOB_SPAWNER",
+					"CHANCE": 0.10,
+					"MESSAGE": "&b%amount%x %name%",
+					"REWARD": {
+						"TYPE": "MOB_SPAWNER",
+						"ENTITY_ID": 57,
+						"AMOUNT": "6"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b14-18 &eGolden Apples",
+					"DISPLAY_MATERIAL": "GOLDEN_APPLE",
+					"CHANCE": 0.10,
+					"MESSAGE": "&b%amount%x &eGolden Apples",
+					"REWARD": {
+						"TYPE": "GOLDEN_APPLE",
+						"DATA": 1,
+						"AMOUNT": "%14-18%"
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&b20-24 &aCreeper Eggs",
+					"DISPLAY_MATERIAL": "MONSTER_EGG",
+					"DISPLAY_DATA": 50,
+					"CHANCE": 0.11,
+					"MESSAGE": "&b%amount%x &aCreeper Eggs",
+					"REWARD": {
+						"TYPE": "MONSTER_EGG",
+						"DATA": 50,
+						"AMOUNT": "%20-24%"
+					}
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&a$3,500,000-5,500,000",
+					"DISPLAY_MATERIAL": "PAPER",
+					"COMMAND": "eco give %player% %3500000-5500000%",
+					"MESSAGE": "&a$%amount%",
+					"CHANCE": 0.235
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&c/fix all Command",
+					"DISPLAY_MATERIAL": "ANVIL",
+					"COMMAND": "lp user %player% permission set essentials.fix.all true",
+					"MESSAGE": "&c\"/fix all\" command",
+					"CHANCE": 0.02
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&7[&aN&bI&cT&eR&5O&7] &fTag",
+					"DISPLAY_MATERIAL": "NAME_TAG",
+					"CHANCE": 0.20,
+					"MESSAGE": "%name%",
+					"REWARD": {
+						"TYPE": "NAME_TAG",
+						"AMOUNT": "1",
+						"NAME": "&7[&aN&bI&cT&eR&5O&7] &fTag",
+						"NBT": [
+							{
+								"key": "tag",
+								"value": "&7[&aN&bI&cT&eR&5O&7]"
+							}
+						]
+					}
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&bSpeed 2 Potion &6&l(INFINITE)",
+					"DISPLAY_MATERIAL": "POTION",
+					"COMMAND": "infinitepotioneffect %player% speed 2",
+					"MESSAGE": "&bSpeed 2 Potion &6&l(INFINITE)",
+					"CHANCE": 0.01
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&bHaste 2 Potion &6&l(INFINITE)",
+					"DISPLAY_MATERIAL": "POTION",
+					"COMMAND": "infinitepotioneffect %player% haste 2",
+					"MESSAGE": "&bHaste 2 Potion &6&l(INFINITE)",
+					"CHANCE": 0.01
+				},
+				{
+					"TYPE": "COMMAND",
+					"NAME": "&bStrength 2 Potion &6&l(INFINITE)",
+					"DISPLAY_MATERIAL": "POTION",
+					"COMMAND": "infinitepotioneffect %player% strength 2",
+					"MESSAGE": "&bStrength 2 Potion &6&l(INFINITE)",
+					"CHANCE": 0.01
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&4Warlord Rank",
+					"DISPLAY_MATERIAL": "PAPER",
+					"CHANCE": 0.01,
+					"MESSAGE": "&4Warlord Rank Voucher",
+					"REWARD": {
+						"TYPE": "PAPER",
+						"AMOUNT": "1",
+						"NAME": "&4Warlord Rank Voucher",
+						"NBT": [
+							{
+								"key": "rank",
+								"value": "warlord"
+							}
+						]
+					}
+				},
+				{
+					"TYPE": "ITEM",
+					"NAME": "&3Duke Rank",
+					"DISPLAY_MATERIAL": "PAPER",
+					"CHANCE": 0.005,
+					"MESSAGE": "&3Duke Rank Voucher",
+					"REWARD": {
+						"TYPE": "PAPER",
+						"AMOUNT": "1",
+						"NAME": "&3Duke Rank Voucher",
+						"NBT": [
+							{
+								"key": "rank",
+								"value": "duke"
+							}
+						]
+					}
+				}
+			]
 		}
 	}
 }

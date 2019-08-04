@@ -1,13 +1,14 @@
 package osf.shop;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import de.dustplanet.util.SilkUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.PotionMeta;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import osf.OSF;
 import osf.gui.ClickableItem;
 import osf.utils.InventoryUtil;
@@ -26,6 +27,11 @@ public class ShopItem {
         this.jsonItem = jsonItem;
         if (shopItemStack.getType() == Material.MOB_SPAWNER) {
             this.shopItemStack = OSF.silkUtil.setSpawnerType(shopItemStack, (short) getJsonItem().get("ENTITY_ID").asInt(), "&e%creature% &fSpawner");
+        }
+        if(shopItemStack.getType() == Material.POTION || shopItemStack.getType() == Material.SPLASH_POTION) {
+            PotionMeta potionMeta = (PotionMeta) shopItemStack.getItemMeta();
+            potionMeta.addCustomEffect(new PotionEffect(PotionEffectType.getByName(getJsonItem().get("EFFECT").asText()), getJsonItem().get("AMPLIFIER").asInt(), getJsonItem().get("DURATION").asInt()), true);
+            shopItemStack.setItemMeta(potionMeta);
         }
     }
 

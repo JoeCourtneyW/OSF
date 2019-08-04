@@ -2,17 +2,15 @@ package osf.player;
 
 
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
-import org.pmw.tinylog.Logger;
+import org.bukkit.potion.PotionEffectType;
 import osf.OSF;
 import osf.database.Cell;
 import osf.database.Row;
 import osf.database.tables.PlayerDataTable;
-import osf.utils.ItemBuilder;
+import osf.potions.InfinitePotionEffect;
 
 import java.util.*;
 import java.util.function.Predicate;
@@ -23,14 +21,9 @@ public class PlayerModel {
     private static ArrayList<PlayerModel> playerModels = new ArrayList<>();
 
     private UUID uuid;
-    private boolean isSpectating = false;
-    private boolean isModMode = false;
-    private boolean isStaffChat = false;
-    private String nickname = "";
-    private ArrayList<PlayerModel> watchedBy = new ArrayList<>();
-    private PlayerModel watching = null;
 
     private HashMap<String, Integer> crateKeys = new HashMap<>();
+    private ArrayList<InfinitePotionEffect> infinitePotionEffects = new ArrayList<>();
 
     public static void registerPlayerTable(PlayerDataTable playerDataTable) {
         PlayerModel.playerDataTable = playerDataTable;
@@ -42,6 +35,40 @@ public class PlayerModel {
     private PlayerModel(UUID uuid) {
         this.uuid = uuid;
         registerCrateKeys();
+        registerInfinitePotionEffects();
+    }
+
+    private void registerInfinitePotionEffects() {
+        this.infinitePotionEffects = new ArrayList<>();
+        String potionList = getDatabaseRow().getCell("INIFINITE_POTION_EFFECTS").getValue().toString();
+        String[] potionListSplit = potionList.split(";");
+        for(String potionEffect : potionListSplit) {
+            if(!potionEffect.isEmpty()) {
+                String[] data = potionEffect.split(",");
+                String effectType = data[0];
+                int amplifier = Integer.parseInt(data[1]);
+                this.infinitePotionEffects.add(new InfinitePotionEffect(PotionEffectType.getByName(effectType), amplifier));
+            }
+        }
+    }
+
+    public Collection<InfinitePotionEffect> getInfinitePotionEffects() {
+        return Collections.unmodifiableCollection(infinitePotionEffects);
+    }
+
+    public void addInfinitePotionEffect(InfinitePotionEffect effect) {
+        infinitePotionEffects.add(effect);
+        effect.giveToPlayer(getPlayer());
+        updateInfinitePotionEffectsCell();
+    }
+
+    private void updateInfinitePotionEffectsCell() {
+        StringJoiner serialized = new StringJoiner(";");
+        for(InfinitePotionEffect infinitePotionEffect : infinitePotionEffects) {
+            serialized.add(infinitePotionEffect.getPotionEffectType().toString() + "," + infinitePotionEffect.getPotionEffectAmplifer());
+        }
+        getDatabaseRow().getCell("INFINITE_POTION_EFFECTS").setValue(serialized.toString());
+        pushRowToDatabase();
     }
 
     private void registerCrateKeys() {
@@ -92,50 +119,6 @@ public class PlayerModel {
         return this.uuid;
     }
 
-    public boolean isSpectating() {
-        return this.isSpectating;
-    }
-
-    public void setSpectating(boolean isSpectating) {
-        this.isSpectating = isSpectating;
-    }
-
-    public boolean isModMode() {
-        return this.isModMode;
-    }
-
-    public void setModMode(boolean isModMode) {
-        this.isModMode = isModMode;
-    }
-
-    public boolean isStaffChat() {
-        return this.isStaffChat;
-    }
-
-    public void setStaffChat(boolean isStaffChat) {
-        this.isStaffChat = isStaffChat;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
-
-    public ArrayList<PlayerModel> getWatchedBy() {
-        return watchedBy;
-    }
-
-    public PlayerModel getWatching() {
-        return watching;
-    }
-
-    public void setWatching(PlayerModel watching) {
-        this.watching = watching;
-    }
-
     public boolean isOnline() {
         return Bukkit.getPlayer(uuid) != null;
     }
@@ -166,16 +149,6 @@ public class PlayerModel {
             }
         }
         return nearestPlayer;
-    }
-
-    public void setModModeInventory() {
-        Player p = getPlayer();
-        p.getInventory().clear();
-        p.getInventory().setArmorContents(new ItemStack[4]);
-
-        p.getInventory().setItem(4,
-                new ItemBuilder(Material.EYE_OF_ENDER).displayName("§c§lLEAVE MOD MODE").grab());
-        p.updateInventory();
     }
 
     public void addNoReductionEffect(PotionEffect effect) {
@@ -212,7 +185,6 @@ public class PlayerModel {
         playerDataTable.updateEntry(getDatabaseRow());
     }
 
-
     public void sendMessage(String message) {
         getPlayer().sendMessage(message);
     }
@@ -222,8 +194,7 @@ public class PlayerModel {
     }
 
     public static Collection<PlayerModel> getAllPlayers() {
-        //return Collections.unmodifiableCollection(playerModels);
-        return playerModels;
+        return Collections.unmodifiableCollection(playerModels);
     }
 
     public static Collection<PlayerModel> getPlayers(Predicate<PlayerModel> predicate) {
@@ -272,9 +243,16 @@ public class PlayerModel {
 
     public static PlayerModel getPlayerModel(UUID uuid) {
         for (PlayerModel pm : getAllPlayers()) {
-            if (pm.getUUID().toString().equals(uuid.toString())) {
+            if (pm.getUUID().toString().equals(uuid.toString()))
                 return pm;
-            }
+        }
+        return null;
+    }
+
+    public static PlayerModel getPlayerModelByDiscordSnowflake(String snowflake) {
+        for(PlayerModel pm : getAllPlayers()) {
+            if(pm.getDatabaseRow().getCell("DISCORD_SNOWFLAKE").getValue().asString().equalsIgnoreCase(snowflake))
+                return pm;
         }
         return null;
     }

@@ -11,6 +11,7 @@ import org.pmw.tinylog.Configurator;
 import org.pmw.tinylog.Level;
 import org.pmw.tinylog.Logger;
 import org.pmw.tinylog.writers.FileWriter;
+import osf.blacklist.CraftingBlacklist;
 import osf.chat.ChatFormatter;
 import osf.chat.ItemShow;
 import net.milkbowl.vault.chat.Chat;
@@ -29,10 +30,12 @@ import osf.gui.InventoryManager;
 import osf.player.PlayerModel;
 import osf.player.PlayerModelListener;
 import osf.playerheads.PlayerHeadDropListener;
+import osf.potions.InfinitePotionEffectListener;
 import osf.shop.CommandShop;
 import osf.shop.ShopGUI;
 import osf.utils.ConcurrentUtil;
 import osf.utils.SpigotConsoleWriter;
+import osf.vouchers.VoucherListener;
 
 import java.io.File;
 import java.io.IOException;
@@ -68,7 +71,7 @@ public class OSF extends JavaPlugin {
         instance = this;
         setupTinyLog();
 
-        Logger.info("Enabling Core plugin");
+        Logger.info("Enabling Core osf.plugin");
 
         configuration = new Configuration(this);
         configuration.loadConfigurationIntoMemory();
@@ -129,7 +132,7 @@ public class OSF extends JavaPlugin {
         databaseManager.cleanup();
         Logger.info("Flushed MySQL Database connection");
 
-        Logger.info("Disabling Core plugin");
+        Logger.info("Disabling Core osf.plugin");
         instance = null;
 
     }
@@ -167,6 +170,9 @@ public class OSF extends JavaPlugin {
         getPluginManager().registerEvents(new ChatFormatter(), this);
         getPluginManager().registerEvents(new PlayerHeadDropListener(), this);
         getPluginManager().registerEvents(new PlayerModelListener(), this);
+        getPluginManager().registerEvents(new InfinitePotionEffectListener(), this);
+        getPluginManager().registerEvents(new CraftingBlacklist(), this);
+        getPluginManager().registerEvents(new VoucherListener(), this);
     }
 
     private void setupTinyLog() {

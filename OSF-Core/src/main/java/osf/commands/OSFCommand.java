@@ -50,7 +50,7 @@ public abstract class OSFCommand implements CommandExecutor {
         if (OSF.getInstance().getCommand(commandName) != null)
             OSF.getInstance().getCommand(commandName).setExecutor(this);
         else
-            Logger.warn("Command (" + commandName + ") needs to be registered in the plugin.yml");
+            Logger.warn("Command (" + commandName + ") needs to be registered in the osf.plugin.yml");
     }
 
     public abstract void run(CommandSender sender, String[] args);

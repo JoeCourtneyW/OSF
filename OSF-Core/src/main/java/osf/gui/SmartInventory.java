@@ -162,7 +162,7 @@ public class SmartInventory {
 
             if(manager == null)
                 throw new IllegalStateException("The manager of the SmartInventory.Builder must be set, "
-                        + "or the SmartInvs should be loaded as a plugin.");
+                        + "or the SmartInvs should be loaded as a osf.plugin.");
 
             SmartInventory inv = new SmartInventory(manager);
             inv.id = this.id;

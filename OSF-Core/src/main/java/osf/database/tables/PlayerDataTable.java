@@ -25,6 +25,10 @@ public class PlayerDataTable extends Table
 
         columnAry.add(new Cell("CRATE_KEYS", "", JDBCType.VARCHAR, 1000));
 
+        columnAry.add(new Cell("INFINITE_POTION_EFFECTS", "", JDBCType.VARCHAR, 1000));
+
+        columnAry.add(new Cell("DISCORD_SNOWFLAKE", "", JDBCType.VARCHAR, 40));
+
 		return new Row(columnAry.toArray(new Cell[0]));
 	}
 

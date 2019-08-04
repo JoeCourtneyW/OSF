@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.osf</groupId>
-    <artifactId>OSF-Core</artifactId>
+    <artifactId>OSF</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>OSF-Core</name> <!-- Actual project name -->
+    <name>OSF</name> <!-- Actual project name -->
     <url>http://maven.apache.org</url>
 
     <properties> <!-- Sets the char set for the project -->
@@ -29,7 +29,11 @@
         </repository>
     </repositories>
     <dependencies> <!-- All the dependencies required for the project to run -->
-
+            <dependency>
+                <groupId>com.discord4j</groupId>
+                <artifactId>discord4j-core</artifactId>
+                <version>3.0.7</version>
+            </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
